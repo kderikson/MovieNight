@@ -1,0 +1,108 @@
+/*!
+ * Start Bootstrap - Full HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+.full {
+    background: url('../assets/mountain.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    width: 1920px;
+    height: auto;
+}
+
+.no-bg {
+	background: none;
+	background-color: none;
+}
+
+#blur-bg {
+	position: absolute;
+	margin: 0px auto;
+	margin-top: 98px;
+	width: 100%;
+	height: auto;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 99;
+
+/*	background-position: center -220px;
+*/
+	filter: blur(9px);
+	-webkit-filter: blur(9px);
+	-moz-filter: blur(9px);
+
+	opacity: .8;
+
+	background-color: #fff;
+
+	/*background: url('../assets/inception.jpg') no-repeat center center fixed;
+	background-repeat: no-repeat;
+	background-size: 1080px auto;*/
+}
+
+#blur {
+	position: relative;
+	z-index: 100;
+
+}
+
+.jumbotron p {
+	color: #000;
+}
+
+#movieinfo {
+	display: none;
+}
+
+#poster {
+	height: 310px;
+	width: auto;
+}
+
+#blur h1 {
+	margin-top: 0px;
+}
+
+.navigation {
+	background: none;
+	background-color: none;
+	border: 0px;
+}
+
+.navbutton {
+	background-color: none;
+
+}
+
+#sitenav {
+	display: none;
+}
+
+.btn-transparent {
+	background: none;
+	border: 1px solid black;
+}
+
+.btn-transparent:hover {
+	background: #F8F8FF;
+}
+
+.btn-transparent:active {
+	border: 1px solid black;	
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+}

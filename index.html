@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Full - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script>
+    function RandomMovie() {
+        var randomNum = Math.round(Math.random()*250+1);
+        if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+      } else { // code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+        xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+        document.getElementById("titleinfo").style.display = 'none';
+        document.getElementById("movieinfo").style.display = 'block';
+        document.getElementById("movieinfo").innerHTML=xmlhttp.responseText;
+        document.getElementById("sitenav").style.display = 'block';
+    }
+  }
+      // alert(randomNum);
+      xmlhttp.open("GET","getmovie.php?q="+randomNum,true);
+      xmlhttp.send();
+
+    }
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navigation" role="navigation" id="sitenav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Movie Night</a>
+            <div class="collapse navbar-collapse">
+                <button class="btn btn-default navbar-btn pull-right navbutton" onClick="RandomMovie();">Random</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Put your page content here! -->
+    <div class="container">
+        <div class="jumbotron no-bg">
+            <div id="titleinfo">
+                <h1>Movie Night</h1>
+                <p class="lead">Can't decide what movie to watch? Let me choose one for you.</p>
+                <p class="lead">Click the button below to recieve a random movie from the IMDB's Top 250 List.</p>
+                <p><button type="button" onClick="RandomMovie();" class="btn btn-lg btn-transparent">Get My Movie</button></p>
+            </div>
+            <div id="movieinfo">
+               <!--  <div class="col-xs-3" id="poster">
+                    <img id="poster" src="http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg">
+                </div>
+                <div class="col-xs-8">
+                    <div id="blur-bg" class="col-xs-9 full"></div>
+                    <div id="blur">
+                            <h1>The Shawshank Redemption </h1>(1994)
+                            <p class="lead">Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</p>
+                            <p><b>Director: </b>Frank Darabont</p>
+                            <p><b>Stars: </b>Tim Robbins, Morgan Freeman, Bob Gunton</p> 
+                    </div> -->
+                    
+            </div>
+                
+                
+            </div>
+        </div>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
